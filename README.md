@@ -15,6 +15,7 @@ Verificar o arquivo *variables.tf* em *tf-plan*.
   * Subnet AZ1 = 10.0.60.0/24
   * Subnet AZ2 = 10.0.70.0/24
 
+
 - SA = 10.1.0.0/16 
 
   * Subnet AZ1 = 10.1.80.0/24
