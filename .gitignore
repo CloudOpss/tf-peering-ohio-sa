@@ -1,0 +1,15 @@
+.terraform
+.terraform.lock.hcl
+terraform.*
+
+tf-plan/.terraform
+tf-plan/.terraform.lock.hcl
+tf-plan/terraform.*
+
+ohio/.terraform
+ohio/.terraform.lock.hcl
+ohio/terraform.*
+
+sa/.terraform
+sa/.terraform.lock.hcl
+sa/terraform.*
