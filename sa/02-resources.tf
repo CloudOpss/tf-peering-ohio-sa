@@ -1,6 +1,6 @@
   # VPC
   resource "aws_vpc" "sa" {
-    cidr_block = "10.1.0.0/16"
+    cidr_block = var.cidr_sa
 
     tags = tomap({
       name = "VPC South America"
@@ -22,7 +22,7 @@
   # Subnet 1
   resource "aws_subnet" "sa-az1" {
     vpc_id                  = aws_vpc.sa.id
-    cidr_block              = "10.1.80.0/24"
+    cidr_block              = var.subnet_sa_az1
     map_public_ip_on_launch = false
     availability_zone       = "${var.region_sa}a"
   }
@@ -30,7 +30,7 @@
   # Subnet 2
   resource "aws_subnet" "sa-az2" {
     vpc_id                  = aws_vpc.sa.id
-    cidr_block              = "10.1.90.0/24"
+    cidr_block              = var.subnet_sa_az2
     map_public_ip_on_launch = false
     availability_zone       = "${var.region_sa}b"
   }

@@ -1,6 +1,6 @@
   # VPC
   resource "aws_vpc" "ohio" {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = var.cidr_ohio
 
     tags = tomap({
       name = "VPC Ohio"
@@ -22,7 +22,7 @@
   # Subnet 1
   resource "aws_subnet" "ohio-az1" {
     vpc_id                  = aws_vpc.ohio.id
-    cidr_block              = "10.0.60.0/24"
+    cidr_block              = var.subnet_ohio_az1
     map_public_ip_on_launch = false
     availability_zone       = "${var.region_ohio}a"
   }
@@ -31,7 +31,7 @@
   resource "aws_subnet" "ohio-az2" {
     #  provider = aws.ohio
     vpc_id                  = aws_vpc.ohio.id
-    cidr_block              = "10.0.70.0/24"
+    cidr_block              = var.subnet_ohio_az2
     map_public_ip_on_launch = false
     availability_zone       = "${var.region_ohio}b"
   }
